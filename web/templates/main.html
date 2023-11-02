@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for data in datas %}
+        <div class="col-md-3">
+            {% load get_item_filter %}
+            {% for key in data.data %}
+                {{key}} : {{data.data|get_item:key}}
+                <br>
+                -------------------------------
+                <br>
+            <br>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
